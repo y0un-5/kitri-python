@@ -8,3 +8,4 @@ for a in range(2,10):
     for b in range(1,10):
         print(f"{a} * {b} = {a * b}")
     print("--------절취선-----------")
+    print("\n")
