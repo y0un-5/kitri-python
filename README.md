@@ -1,3 +1,3 @@
 # source
- python_study
- kitri - 30
+# python_study
+# kitri - 30
