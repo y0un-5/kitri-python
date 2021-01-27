@@ -1,0 +1,31 @@
+절차 지향 프로그래밍
+함수 지향 프로그래밍
+객체 지향 프로그래밍
+
+
+
+
+
+
+def 함수명(매개변수, Parameter)
+        코드1-1
+        코드1-2
+        코드1-3
+        return 값
+
+
+
+def add(a, b):
+    result = a + b
+    retrun result
+
+
+add(5, 2)
+7
+
+
+x = add(5, 2)
+x = 7
+
+
+

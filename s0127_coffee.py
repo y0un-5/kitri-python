@@ -4,19 +4,25 @@
 # 판매하고 잔량이 0이되면,
 # 판매를 종료한다.
 
-coffee = 10
+coffee = 5
+price = 300
 
-while True:
-    money = int(input("돈을 넣어주세요: "))
-    if money == 300:
+
+while coffee > 0 :
+    
+    money = int(input(f"돈을 넣어주세요[잔량:{coffee}]: "))
+    
+    if money == price:
         print("커피를 줍니다.")
-        coffee -= 1
-    elif money > 300:
-        print(f"커피를 드립니다. {money-300}원을 거슬러드립니다.")
-        coffee -= 1
+    
+    elif money > price:
+        print(f"커피를 드립니다. {money-price}원을 거슬러드립니다.")
+    
     else:
-        print(f"{300-money}원이 모자랍니다.")
+        print(f"{price-money}원이 모자랍니다.")
+        continue
+    
+    coffee -= 1
+    print()
 
-    if coffee == 0:
-        print("커피가 모두 판매되었습니다.")
-        break
+print("커피가 모두 판매되었습니다.")
