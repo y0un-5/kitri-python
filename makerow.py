@@ -25,22 +25,35 @@ def average(scores):
 
 file = open("students.csv", "r")
 rows2 = csv.reader(file)
+rows = list(rows2)
 
+for c in ['A', 'B']:
+    total_sum = 0
+    total_count = 0
 
-
-
-
-
-        
-for row in rows2:
-    uid = row[0]
-    name = row[1]
-    clas = row[2]
-    if clas == 'A':
+    for row in rows:
+        uid, name, clas = row[0:3]
         scores = row[3:]
         avg = average(scores)
-        print(avg)
-    else:
-        scores = row[3:]
-        bavg = average(scores)
-        print(avg)
+
+        if clas == c:
+            total_sum += avg
+            total_count += 1
+    total_avg = total_sum / total_count
+    print(f"{c}반 평균 : {total_avg:.1f}")
+
+"""
+total_clas = {'A':{'sum':0, 'count':0},
+              'B':{'sum':0, 'count':0}}
+
+for row in rows2:
+    uid, name, clas = row[0:3]
+    scores = row[3:]
+    avg = average(scores)
+    total_class[clas]['sum'] += avg
+    total_class[clas]['sum'] += 1
+
+for clas in total_class.keys():
+        avg = total_class['sum'] / total_class[clas]['count']
+        print(f"{clas}의 평균 : {avg:.1f}")
+"""
