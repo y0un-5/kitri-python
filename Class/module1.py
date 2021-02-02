@@ -25,6 +25,22 @@ class FourCal:
         result = self.first / self.second
         return result
 
+##클래스 상속
+class MoreFourCal(FourCal):
+    def pow(self):
+        result = self.first ** self.second
+        return result
+##FourCal의 모든 기능 + pow 기능 을 쓸 수 있다.
+
+class SafeFourCal(FourCal):
+    def div(self):
+        if self.second == 0:
+            result = 0
+        else:
+            result = self.first
+        return result
+
+
 def udir(object):
 
     attrs = []
