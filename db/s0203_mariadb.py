@@ -21,7 +21,7 @@ import pymysql
 host = "192.168.0.155"
 port = 3306
 user = "python"
-password = "toortoor"
+password = "--------"
 db = "shopping_db"
 
 #db 서버와 연결

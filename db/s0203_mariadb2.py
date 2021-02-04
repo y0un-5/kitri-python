@@ -46,7 +46,7 @@ def product(rows):
 host = "192.168.0.155"
 port = 3306
 user = "python"
-password = "toortoor"
+password = "--------"
 db = "shopping_db"
 
 connect = pymysql.connect(host = host,
